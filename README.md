@@ -159,9 +159,6 @@ e de fácil manutenção! Para rodá-lo localmente no projeto, execute os comand
 npm run lint
 ```
 
-⚠️ **PULL REQUESTS COM ISSUES DE LINTER NÃO SERÃO AVALIADAS.
-ATENTE-SE PARA RESOLVÊ-LAS ANTES DE FINALIZAR O DESENVOLVIMENTO!** ⚠️
-
 ---
 
 ## Requisitos do projeto
