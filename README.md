@@ -44,7 +44,7 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 # Habilidades
 
-- Escrever códigos em JavaScript que usam variáveis, constantes e tipos primitivos;
+- Escrever códigos em JavaScript que usam variáveis e tipos primitivos;
 - Utilizar conceitos da linguagem como a tipagem dinâmica e operadores lógicos/aritméticos/de atribuição no seu código;
 - Criar códigos que usam estruturas condicionais, como o if/else .
 - Manipular arrays (listas);
@@ -59,19 +59,11 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 Para entregar o seu projeto você deverá criar um _Pull Request_ neste repositório.
 
-Este _Pull Request_ deverá conter o arquivo `challenges.js` com suas funções implementadas.
+Este Pull Request deverá conter os arquivos `challenges.js` e `challenges2.js` com suas funções implementadas.
 
-Todas as funções já estão declaradas no arquivo `challenges.js`. Você pode criar outras funções para auxiliarem as já existentes. Contudo **Não altere o nome das funções que já existem**.
+Todas as funções já estão declaradas nos arquivos `challenges.js` e `challenges2.js`. Você pode criar outras funções para auxiliarem as já existentes. Contudo **Não altere o nome das funções que já existem**.
 
 **Os parâmetros das funções já existentes podem e devem ser alterados.**
-
-## Prazo para entrega
-
-O Prazo para entrega é de **7 dias corridos** após o último dia de projeto.
-
-**Exemplo:** Se o último dia de projeto aconteceu na **quarta-feira, dia 17 de junho**, seu prazo final de entrega será na **quarta-feira 24 de junho** às **14 horas**.
-
-Vale ressaltar que os projetos podem ter mais de um dia de duração, por isso o prazo de **7 dias** é contado à partir do último dia de projeto.
 
 ## ⚠️ É importante que seus arquivos não tenham o nome alterado! ⚠️
 
@@ -98,7 +90,11 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
   * Entre na pasta do repositório que você acabou de clonar:
     * `cd sd-011-project-playground-functions`
 
-2. Crie uma branch a partir da branch `master`
+2. Instale as dependências e inicialize o projeto
+  * Instale as dependências:
+    * npm install
+
+3. Crie uma branch a partir da branch `master`
   * Verifique que você está na branch `master`
     * Exemplo: `git branch`
   * Se não estiver, mude para a branch `master`
@@ -107,7 +103,7 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
     * Você deve criar uma branch no seguinte formato: `nome-de-usuario-nome-do-projeto`
     * Exemplo: `git checkout -b joaozinho-project-playground-functions`
 
-3. Adicione as mudanças ao _stage_ do Git e faça um `commit`
+4. Adicione as mudanças ao _stage_ do Git e faça um `commit`
   * Verifique que as mudanças ainda não estão no _stage_
     * Exemplo: `git status` (devem aparecer listados os novos arquivos em vermelho)
   * Adicione o novo arquivo ao _stage_ do Git
@@ -119,10 +115,10 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
         * `git commit -m 'iniciando o projeto. VAMOS COM TUDO :rocket:'` (fazendo o primeiro commit)
         * `git status` (deve aparecer uma mensagem tipo _nothing to commit_ )
 
-4. Adicione a sua branch com o novo `commit` ao repositório remoto
+5. Adicione a sua branch com o novo `commit` ao repositório remoto
   * Usando o exemplo anterior: `git push -u origin joaozinho-project-playground-functions`
 
-5. Crie um novo `Pull Request` _(PR)_
+6. Crie um novo `Pull Request` _(PR)_
   * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-011-project-playground-functions/pulls)
   * Clique no botão verde _"New pull request"_
   * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
@@ -151,13 +147,13 @@ Lembre-se que você pode consultar nosso conteúdo sobre [Git & GitHub](https://
 
 ## Linter
 
-Para garantir a qualidade do código, vamos utilizar neste projeto o linter `ESLint`.
-Assim o código estará alinhado com as boas práticas de desenvolvimento, sendo mais legível
-e de fácil manutenção! Para rodá-lo localmente no projeto, execute os comandos abaixo:
+Para garantir a qualidade do seu código de forma a tê-lo mais legível, de mais fácil manutenção e seguindo as boas práticas de desenvolvimento nós utilizamos neste projeto o linter `ESLint`. Para rodar o linter localmente no seu projeto, execute o comando abaixo:
 
-  ```bash
+```bash
 npm run lint
 ```
+
+⚠ **NESTE PROJETO O ESLINT NÃO SERÁ AVALIADO. VOCÊ PODE RODAR O TESTE LOCALMENTE E FAZER AS CORREÇÕES SE DESEJAR!** ⚠
 
 ---
 
