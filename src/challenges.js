@@ -1,6 +1,6 @@
 // Desafio 1
 function compareTrue(booleanValue1, booleanValue2) {
-  return booleanValue1 === true && booleanValue2 === true;
+  return booleanValue1 && booleanValue2;
 }
 
 // Desafio 2
@@ -28,8 +28,8 @@ function footballPoints(wins, ties) {
 
 // Desafio 6
 function highestCount(value) {
-  let highestNumber=0;
-  let repeatedAmount=0;
+  let highestNumber = 0;
+  let repeatedAmount = 0;
   for (let index in value) {
     if (value[index] > highestNumber) {
       highestNumber = value[index];
@@ -44,8 +44,22 @@ function highestCount(value) {
 }
 
 // Desafio 7
-function catAndMouse() {
-  // seu código aqui
+function catAndMouse(mouse, cat1, cat2) {
+
+  cat1 = Math.abs(cat1 - mouse);
+  cat2 = Math.abs(cat2 - mouse);
+  console.log(cat1, cat2);
+
+  if (cat1 < cat2) {
+    return 'cat1';
+  }
+  else if (cat1 > cat2) {
+    return 'cat2';
+  }
+  else {
+    return 'os gatos trombam e o rato foge';
+  }
+
 }
 
 // Desafio 8
