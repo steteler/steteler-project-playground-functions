@@ -53,74 +53,77 @@ function catAndMouse(mouse, cat1, cat2) {
 
 // Desafio 8
 function fizzBuzz(value) {
-  let arrayString=[];
-  for (let index in value) {
-    if (value[index] % 5 === 0 && value[index] % 3 === 0) {
-      arrayString.push('fizzBuzz');
-    }
-    else if (value[index] % 3 === 0) {
-      arrayString.push('fizz');
-    }
-    else if (value[index] % 5 === 0) {
-      arrayString.push('buzz');
-    }
-    else {
-      arrayString.push('bug!');
+  let arrayString = [];
+  for (let index = 0; index < value.length; index += 1) {
+    arrayString[index] = 'bug';
+    if (value[index] % 15 === 0) {
+      arrayString[index] = 'fizzBuzz';
+    } else if (value[index] % 3 === 0) {
+      arrayString[index] = 'fizz';
+    } else if (value[index] % 5 === 0) {
+      arrayString[index] = 'buzz';
     }
   }
   return arrayString;
 }
 
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
+
 // Desafio 9
 function encode(string) {
-  let encodeString='';
+  let encodeString = '';
   for (let index of string) {
     switch (index) {
-      case 'a':
-        encodeString += 1;
-        break;
-      case 'e':
-        encodeString += 2;
-        break;
-      case 'i':
-        encodeString += 3;
-        break;
-      case 'o':
-        encodeString += 4;
-        break;
-      case 'u':
-        encodeString += 5;
-        break;
-      default:
-        encodeString += index;
-        break;
+    case 'a':
+      encodeString += 1;
+      break;
+    case 'e':
+      encodeString += 2;
+      break;
+    case 'i':
+      encodeString += 3;
+      break;
+    case 'o':
+      encodeString += 4;
+      break;
+    case 'u':
+      encodeString += 5;
+      break;
+    default:
+      encodeString += index;
+      break;
     }
   }
   return encodeString;
 }
 
 function decode(string) {
-  let decodeString='';
+  let decodeString = '';
   for (let index of string) {
     switch (index) {
-      case '1':
-        decodeString += 'a';
-        break;
-      case '2':
-        decodeString += 'e';
-        break;
-      case '3':
-        decodeString += 'i';
-        break;
-      case '4':
-        decodeString += 'o';
-        break;
-      case '5':
-        decodeString += 'u';
-        break;
-      default:
-        decodeString += index;
-        break;
+    case '1':
+      decodeString += 'a';
+      break;
+
+    case '2':
+      decodeString += 'e';
+      break;
+
+    case '3':
+      decodeString += 'i';
+      break;
+
+    case '4':
+      decodeString += 'o';
+      break;
+
+    case '5':
+      decodeString += 'u';
+      break;
+
+    default:
+      decodeString += index;
+      break;
     }
   }
   return decodeString;
