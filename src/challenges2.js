@@ -1,17 +1,17 @@
 // Desafio 10
-function techList(array, name) {
-  array = array.sort();
+function techList(tech, name) {
+  tech = tech.sort();
 
-  for (let index = 0; index < array.length; index += 1) {
-    array[index] = {
-      array: array[index],
+  for (let index = 0; index < tech.length; index += 1) {
+    tech[index] = {
+      tech: tech[index],
       name,
     };
   }
-  if (array.length === 0) {
-    array = 'Vazio!';
+  if (tech.length === 0) {
+    tech = 'Vazio!';
   }
-  return array;
+  return tech;
 }
 
 // Desafio 11
