@@ -74,8 +74,24 @@ function generatePhoneNumber(array) {
 
 
 // Desafio 12
-function triangleCheck() {
-  // seu código aqui
+function triangleCheck(line1, line2, line3) {
+  let canBeTriangle = false;
+  let sumBC = line2 + line3;
+  let sumAC = line1 + line3;
+  let difAbsBC = Math.abs(line2 - line3);
+  let difAbsAC = Math.abs(line1 - line3);
+  if (line1 < sumBC && line1 > difAbsBC && line2 < sumAC && line2 > difAbsAC) {
+    canBeTriangle = checkLineC(line1, line2, line3);
+  }
+  return canBeTriangle;
+}
+
+function checkLineC(line1, line2, line3) {
+  let canBeTriangle = false;
+  if (line3 < line1 + line2 && line3 > Math.abs(line1 - line2)) {
+    canBeTriangle = true;
+  }
+  return canBeTriangle;
 }
 
 // Desafio 13
