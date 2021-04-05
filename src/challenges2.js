@@ -15,7 +15,7 @@ function techList(array, name) {
 }
 
 // Desafio 11
-function generatePhoneNumber(index, array) {
+function lessThanThreeRepsSecond(index, array) {
   let lessThanThree = true;
   let counterOfRep = 0;
   for (let index2 = 1; index2 < array.length; index2 += 1) {
@@ -38,7 +38,40 @@ function lessThanThreeReps(array) {
   }
   return lessThanThree;
 }
+function betweenZeroNine(array) {
+  let zeroAndNine = true;
+  for (let index = 0; index < array.length; index += 1) {
+    if (array[index] < 0 || array[index] > 9) {
+      zeroAndNine = false;
+    }
+  }
+  return zeroAndNine;
 }
+function withElevenNumbers(array) {
+  let phoneNumber = ['(', 0, 0, ') ', 0, 0, 0, 0, 0, '-', 0, 0, 0, 0];
+  let difOfIndex = 1;
+  for (let index = 0; index < array.length; index += 1) {
+    if (index === 2 || index === 7) {
+      difOfIndex += 1;
+      phoneNumber[index + difOfIndex] = array[index];
+    } else {
+      phoneNumber[index + difOfIndex] = array[index];
+    }
+  }
+  return phoneNumber.join('');
+}
+function generatePhoneNumber(array) {
+  let phoneNumber = [];
+  if (array.length !== 11) {
+    phoneNumber = 'Array com tamanho incorreto.';
+  } else if (betweenZeroNine(array) !== true || lessThanThreeReps(array) !== true) {
+    phoneNumber = 'não é possível gerar um número de telefone com esses valores';
+  } else {
+    phoneNumber = withElevenNumbers(array);
+  }
+  return phoneNumber;
+}
+
 
 // Desafio 12
 function triangleCheck() {
