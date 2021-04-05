@@ -5,7 +5,7 @@ function compareTrue(booleanValue1, booleanValue2) {
 
 // Desafio 2
 function calcArea(base, height) {
-  return (base * height) / 2;
+  return ((base * height) / 2);
 }
 
 // Desafio 3
@@ -15,12 +15,12 @@ function splitSentence(string) {
 
 // Desafio 4
 function concatName(string) {
-  return (string[0], ',', string[string.length - 1]);
+  return (`${string[string.length - 1]}, ${string[0]}`);
 }
 
 // Desafio 5
 function footballPoints(wins, ties) {
-  return (wins * 3) + ties;
+  return ((wins * 3) + ties);
 }
 
 // Desafio 6
@@ -37,10 +37,8 @@ function highestCount(value) {
 
 // Desafio 7
 function catAndMouse(mouse, cat1, cat2) {
-  cat1 = Math.abs(cat1 - mouse);
-  cat2 = Math.abs(cat2 - mouse);
-
-  console.log(cat1, cat2);
+  cat1 = Math.abs(mouse - cat1);
+  cat2 = Math.abs(mouse - cat2);
 
   if (cat1 < cat2) {
     return 'cat1';
@@ -55,7 +53,7 @@ function catAndMouse(mouse, cat1, cat2) {
 function fizzBuzz(value) {
   let arrayString = [];
   for (let index = 0; index < value.length; index += 1) {
-    arrayString[index] = 'bug';
+    arrayString[index] = 'bug!';
     if (value[index] % 15 === 0) {
       arrayString[index] = 'fizzBuzz';
     } else if (value[index] % 3 === 0) {
@@ -67,66 +65,27 @@ function fizzBuzz(value) {
   return arrayString;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]));
-
 // Desafio 9
 function encode(string) {
-  let encodeString = '';
-  for (let index of string) {
-    switch (index) {
-    case 'a':
-      encodeString += 1;
-      break;
-    case 'e':
-      encodeString += 2;
-      break;
-    case 'i':
-      encodeString += 3;
-      break;
-    case 'o':
-      encodeString += 4;
-      break;
-    case 'u':
-      encodeString += 5;
-      break;
-    default:
-      encodeString += index;
-      break;
-    }
+  for (let index = 0; index < string.length; index += 1) {
+    string = string.replace('a', '1');
+    string = string.replace('e', '2');
+    string = string.replace('i', '3');
+    string = string.replace('o', '4');
+    string = string.replace('u', '5');
   }
-  return encodeString;
+  return string;
 }
 
 function decode(string) {
-  let decodeString = '';
-  for (let index of string) {
-    switch (index) {
-    case '1':
-      decodeString += 'a';
-      break;
-
-    case '2':
-      decodeString += 'e';
-      break;
-
-    case '3':
-      decodeString += 'i';
-      break;
-
-    case '4':
-      decodeString += 'o';
-      break;
-
-    case '5':
-      decodeString += 'u';
-      break;
-
-    default:
-      decodeString += index;
-      break;
-    }
+  for (let index = 0; index < string.length; index += 1) {
+    string = string.replace('1', 'a');
+    string = string.replace('2', 'e');
+    string = string.replace('3', 'i');
+    string = string.replace('4', 'o');
+    string = string.replace('5', 'u');
   }
-  return decodeString;
+  return string;
 }
 
 module.exports = {
