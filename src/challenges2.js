@@ -72,8 +72,16 @@ function generatePhoneNumber(array) {
   return phoneNumber;
 }
 
-
 // Desafio 12
+
+function checkLineC(line1, line2, line3) {
+  let canBeTriangle = false;
+  if (line3 < line1 + line2 && line3 > Math.abs(line1 - line2)) {
+    canBeTriangle = true;
+  }
+  return canBeTriangle;
+}
+
 function triangleCheck(line1, line2, line3) {
   let canBeTriangle = false;
   let sumBC = line2 + line3;
@@ -86,17 +94,22 @@ function triangleCheck(line1, line2, line3) {
   return canBeTriangle;
 }
 
-function checkLineC(line1, line2, line3) {
-  let canBeTriangle = false;
-  if (line3 < line1 + line2 && line3 > Math.abs(line1 - line2)) {
-    canBeTriangle = true;
-  }
-  return canBeTriangle;
-}
-
 // Desafio 13
-function hydrate() {
-  // seu código aqui
+function hydrate(string) {
+  let numbs = string.replace(/[^0-9]/g, '');
+  numbs = numbs.split('');
+  let whaterCups = 0;
+  for (let index = 0; index < numbs.length; index += 1) {
+    whaterCups += parseInt(numbs[index], 10);
+  }
+  if (whaterCups > 1) {
+    whaterCups = whaterCups.toString();
+    whaterCups = whaterCups.concat(' copos de água');
+  } else {
+    whaterCups = whaterCups.toString();
+    whaterCups = whaterCups.concat(' copo de água');
+  }
+  return whaterCups;
 }
 
 module.exports = {
